@@ -1,7 +1,7 @@
 # NFC PWA Gateway
 A simple Gateway for opening Progressive Web Applications on Android Devices using a NFC tag.
 
-When scanning a URL on a NFC tag, it will be opened in the browser. It is currently not possible to launch a PWA using this method. As a workaround a page from a different origin has to be opened and redirect to the PWA.
+When scanning a URL on a NFC tag, the browser will open the page. It is currently not possible to launch the associated PWA using this method. As a workaround a page from a different origin has to be opened that redirects to the PWA.
 
 With this gateway application hosted under https://chrsi.github.io/NfcPwaGateway you can simply open any PWA (except the ones hosted on github) using a NFC tag.
 
