@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>PWA Gateway</title>
+  </head>
+  <body>
+    <a id="redirectUrl" style="visibility: hidden;" />
+    <script lang="javascript">
+        const queryString = window.location.search.substr(1);
+        const queryParams = queryString.split('&');
+  
+        const params = [];
+        queryParams.forEach(param => {
+          var kvPair = param.split('=');
+          const paramKey = decodeURIComponent(kvPair[0]);
+          const paramValue = decodeURIComponent(kvPair[1]);
+          params[paramKey] = paramValue;
+        });
+  
+        pwaLink = document.getElementById("redirectUrl");
+        pwaLink.href= params["pwa"];
+        pwaLink.click();
+      </script>
+  </body>
+</html>
