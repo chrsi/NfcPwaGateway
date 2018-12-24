@@ -19,9 +19,8 @@
         pwaLink = document.getElementById("redirectUrl");
         pwaLink.href= params["pwa"];
 
-        setTimeout(() => {
-          pwaLink.click();
-        }, 100);
+        pwaLink.click();
+        window.close();
       </script>
   </body>
 </html>
