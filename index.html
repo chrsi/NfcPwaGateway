@@ -3,7 +3,7 @@
     <title>PWA Gateway</title>
   </head>
   <body>
-    <a id="redirectUrl" style="visibility: hidden;" />
+    <a id="redirectUrl">Redirect</a>
     <script lang="javascript">
         const queryString = window.location.search.substr(1);
         const queryParams = queryString.split('&');
@@ -18,9 +18,9 @@
   
         pwaLink = document.getElementById("redirectUrl");
         pwaLink.href= params["pwa"];
-        pwaLink.click();
+        // pwaLink.click();
 
-        window.close();
+        // window.close();
       </script>
   </body>
 </html>
