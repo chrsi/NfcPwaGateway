@@ -4,6 +4,7 @@
   </head>
   <body>
     <a id="redirectUrl">Redirect</a>
+    <span id="redirectHint"></span>
     <script lang="javascript">
         const queryString = window.location.search.substr(1);
         const queryParams = queryString.split('&');
@@ -18,6 +19,12 @@
   
         pwaLink = document.getElementById("redirectUrl");
         pwaLink.href= params["pwa"];
+
+        const hostRegex = /(https|http):\/\/(.*?)(:|\/)/;
+        const host = params["pwa"].match(hostRegex);
+
+        const redirectHint = document.getElementById("redirectHint");
+        redirectHint.textContent = `Click here to redirect to ${redirectHint}`;
 
         const body = document.getElementsByTagName('body')[0];
         body.onclick = () => {
