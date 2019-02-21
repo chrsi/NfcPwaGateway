@@ -19,8 +19,11 @@
         pwaLink = document.getElementById("redirectUrl");
         pwaLink.href= params["pwa"];
 
-        //window.close();          
-        pwaLink.click();
+        const body = document.getElementsByTagName('body')[0];
+        body.onclick = () => {
+          pwaLink.click();
+          window.close();          
+        }
       </script>
   </body>
 </html>
