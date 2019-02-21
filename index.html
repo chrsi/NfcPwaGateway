@@ -21,7 +21,7 @@
         pwaLink.href= params["pwa"];
 
         const hostRegex = /(https|http):\/\/(.*?)(:|\/)/;
-        const host = params["pwa"].match(hostRegex);
+        const host = params["pwa"].match(hostRegex)[2];
 
         const redirectHint = document.getElementById("redirectHint");
         redirectHint.textContent = `Click here to redirect to ${host}`;
