@@ -24,7 +24,7 @@
         const host = params["pwa"].match(hostRegex);
 
         const redirectHint = document.getElementById("redirectHint");
-        redirectHint.textContent = `Click here to redirect to ${redirectHint}`;
+        redirectHint.textContent = `Click here to redirect to ${host}`;
 
         const body = document.getElementsByTagName('body')[0];
         body.onclick = () => {
