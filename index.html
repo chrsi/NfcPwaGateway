@@ -2,9 +2,13 @@
   <head>
     <title>PWA Gateway</title>
   </head>
-  <body>
-    <a id="redirectUrl">Redirect</a>
-    <span id="redirectHint"></span>
+  <body style="display: flex; justify-content: center; align-items: center; font-family: Arial, Helvetica, sans-serif;">
+    <div >
+        <a id="redirectUrl" style="visibility: hidden">Redirect</a>
+        <img src="baseline-exit_to_app-24px.svg" style="display: block; margin: auto; width: 50%;"/>
+        <span id="redirectHint">You're about to leave this page.</span>
+    </div>
+
     <script lang="javascript">
         const queryString = window.location.search.substr(1);
         const queryParams = queryString.split('&');
